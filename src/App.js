@@ -6,7 +6,6 @@ import './App.css';
 
 function App() {
 
-
   const [items, setItems] = useState([
     { position: 1, name: 'Item1', score: 0 },
     { position: 2, name: 'Item2', score: 0 },
@@ -120,7 +119,7 @@ function App() {
       </Modal>
       
     </div>
-    </div>
+  </div>
   );
 }
 
