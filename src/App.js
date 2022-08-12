@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import logo from './logo.svg';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
 import './App.css';
 
 function App() {
@@ -59,12 +61,16 @@ function App() {
       setSecondIndex(firstIndexCopy + 2)
     }
   }
+  
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <div>
-    <h1><span class="blue">&lt;</span><span class="blue">&gt;</span> <span class="yellow">Responsive</span></h1>
+    <h1><span className="blue">&lt;</span><span className="blue">&gt;</span> <span className="yellow">Table Score</span></h1>
     
-    <table class="container">
+    <table className="container">
       <thead>
         <tr>
           <th><h1>Position</h1></th>
@@ -83,10 +89,36 @@ function App() {
             ))
           }
       </tbody>
-
     </table>
-    </div>
     
+    <div className="position-relative">
+      <br/>
+      <br />
+    <Button className="position-absolute bottom-0 start-50 translate-middle-x" variant="secondary" onClick={handleShow}> Submit a score </Button>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title> Enter Score </Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+        <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <input type="text" disabled value={items[firstIndex].name} />
+              <input type="text" value={firstValue} onChange={handleFirstInputChange} />
+              <input type="text" value={secondValue} onChange={handleSecondInputChange} />
+              <input type="text" disabled value={items[secondIndex].name} />
+            </Form.Group>
+            </Form>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}> Close </Button>
+          <Button variant="primary" onClick={handleSubmit} disabled={firstValue === "" || secondValue === "" || disabled} > Submit </Button>
+        </Modal.Footer>
+      </Modal>
+      
+    </div>
+    </div>
   );
 }
 
