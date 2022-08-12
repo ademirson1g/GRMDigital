@@ -6,6 +6,7 @@ import './App.css';
 
 function App() {
 
+
   const [items, setItems] = useState([
     { position: 1, name: 'Item1', score: 0 },
     { position: 2, name: 'Item2', score: 0 },
@@ -68,7 +69,7 @@ function App() {
 
   return (
     <div>
-    <h1><span className="blue">&lt;</span><span className="blue">&gt;</span> <span className="yellow">Table Score</span></h1>
+    <h1><span className="blue">&lt;</span><span className="blue">&gt;</span> <span className="yellow"> Table Score </span></h1>
     
     <table className="container">
       <thead>
@@ -90,11 +91,12 @@ function App() {
           }
       </tbody>
     </table>
-    
-    <div className="position-relative">
+
+    {/* Bootstrap modal for openening the score inputs */}
+    <div className="position-relative" >
       <br/>
       <br />
-    <Button className="position-absolute bottom-0 start-50 translate-middle-x" variant="secondary" onClick={handleShow}> Submit a score </Button>
+    <Button className="position-absolute bottom-0 start-50 translate-middle-x" variant="secondary" onClick={handleShow} > Submit a score </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title> Enter Score </Modal.Title>
@@ -102,10 +104,10 @@ function App() {
 
         <Modal.Body>
         <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group className="mb-3" >
               <input type="text" disabled value={items[firstIndex].name} />
-              <input type="text" value={firstValue} onChange={handleFirstInputChange} />
-              <input type="text" value={secondValue} onChange={handleSecondInputChange} />
+              <input type="number" value={firstValue} onChange={handleFirstInputChange} />
+              <input type="number" value={secondValue} onChange={handleSecondInputChange} />
               <input type="text" disabled value={items[secondIndex].name} />
             </Form.Group>
             </Form>
