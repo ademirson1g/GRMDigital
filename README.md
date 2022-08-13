@@ -20,8 +20,11 @@
 ## Getting started
 
 In order to start this project, after cloning node modules needs to be installed : 
+
       npm install 🚀
+      
 Then the servers needs to be started and the website will work :
+
       npm start 🚀
 
 ## Desktop View
