@@ -1,8 +1,10 @@
-# Table Score
+![d119d37cf3c94bdff98a3f0e1059043d](https://user-images.githubusercontent.com/80320950/184511087-a5846136-c23f-4803-ba34-06281a8fdf11.png)
+
+# Table Score Deployment Demo Link : https://tablescore.vercel.app/
 
 > 🚧 **Table score is a page through which you can make scores between two "Items".
 
-[Slinkity](https://tablescore.vercel.app/) is a page through which you can make scores between two "Items". The table score includes : 
+[Table Score](https://tablescore.vercel.app/) is a page through which you can make scores between two "Items". The table score includes : 
 
 - 🚀 **There are currently 6 items on the table and each item is compared to the next.For example, we have Item1, which must be compared with Item2,3,4,5,6, when that comparison is finished, then Item2 is compared with Item3,4,5,6 and so on until each Item is compared with each other.  
 - 🔖 **If Item1 is greater than Item2, then Item1 gets 1 point, while Item2 remains its previous value. 
@@ -21,4 +23,12 @@ In order to start this project, after cloning node modules needs to be installed
       npm install 🚀
 Then the servers needs to be started and the website will work :
       npm start 🚀
+
+## Desktop View
+![cd02144081e0623b6ab6a66380f162d3](https://user-images.githubusercontent.com/80320950/184511120-821bc45b-666c-4728-ae1e-827bae9787ae.png)
+![c2b2b4aa24bffc3c8ad31dc767e4c3a6](https://user-images.githubusercontent.com/80320950/184511128-e28fa455-22e1-47a2-8c95-037dfab402cd.png)
+
+## Mobile View
+![92156cb59b9c6f509cac264b215cff85](https://user-images.githubusercontent.com/80320950/184511139-97e4e15f-a605-4325-b83b-ca745a02e1a7.png)
+![ddefe157dfe6e097cf505c0e259f04c5](https://user-images.githubusercontent.com/80320950/184511144-6438ff94-43fb-4836-916b-5823772ca252.png)
 
