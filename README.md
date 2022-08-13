@@ -21,7 +21,7 @@ In order to start this project, after cloning node modules needs to be installed
 
       npm install 🚀
       
-Then the servers needs to be started and the website will work :
+After installing node modules , the servers needs to be started as well :
 
       npm start 🚀
 
