@@ -26,7 +26,7 @@ Then the servers needs to be started and the website will work :
       npm start 🚀
 
 ## Desktop View
-![cd02144081e0623b6ab6a66380f162d3](https://user-images.githubusercontent.com/80320950/184511120-821bc45b-666c-4728-ae1e-827bae9787ae.png)
+![31a77862b57a43cc2005f1a970479a7c](https://user-images.githubusercontent.com/80320950/184511283-97afafc9-970f-4a45-81fd-d3c7d6977026.png)
 ![c2b2b4aa24bffc3c8ad31dc767e4c3a6](https://user-images.githubusercontent.com/80320950/184511128-e28fa455-22e1-47a2-8c95-037dfab402cd.png)
 
 ## Mobile View
