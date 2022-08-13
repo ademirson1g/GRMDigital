@@ -72,7 +72,7 @@ function App() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  
   return (
     <div>
     <h1><span className="blue">&lt;</span><span className="blue">&gt;</span> <span className="yellow"> Table Score </span></h1>
@@ -110,18 +110,16 @@ function App() {
 
         <Modal.Body>
         <Form>
-            <Form.Group className="mb-3" >
               <input type="text" disabled value={items[firstIndex].name} />
               <input type="number" value={firstValue} onChange={handleFirstInputChange} /> 
               <input type="text" disabled value={items[secondIndex].name} />
               <input type="number" value={secondValue} onChange={handleSecondInputChange} />
-            </Form.Group>
             </Form>
         </Modal.Body>
 
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}> Close </Button>
-          <Button variant="primary" onClick={handleSubmit} disabled={firstValue === "" || secondValue === "" || disabled} > Submit </Button>
+          <Button variant="primary" onClick={() => {handleSubmit();}} disabled={firstValue === "" || secondValue === "" || disabled} > Submit </Button>
         </Modal.Footer>
       </Modal>
       
