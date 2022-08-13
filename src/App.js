@@ -33,12 +33,19 @@ function App() {
   const handleSubmit = () => {
     let itemsCopy = JSON.parse(JSON.stringify(items));
     
+    {/* If the first value is higher then second add a point to the first value, if second is higher add point to second value */}
     if (firstValue > secondValue) {
       itemsCopy[firstIndex].score++;
     } else {
       itemsCopy[secondIndex].score++;
     }
 
+    {/* If the points are equals for both items add a point to both values */}
+    if (firstValue == secondValue) {
+      itemsCopy[firstIndex].score++;
+    }
+
+    {/* Adding Sorting to the Table */}
     itemsCopy.sort((a, b) => {
       return b.score - a.score;
     });
@@ -93,7 +100,7 @@ function App() {
 
     {/* Bootstrap modal for openening the score inputs */}
     <div className="position-relative" >
-      <br/>
+      <br />
       <br />
     <Button className="position-absolute bottom-0 start-50 translate-middle-x" variant="secondary" onClick={handleShow} > Submit a score </Button>
       <Modal show={show} onHide={handleClose}>
@@ -105,9 +112,9 @@ function App() {
         <Form>
             <Form.Group className="mb-3" >
               <input type="text" disabled value={items[firstIndex].name} />
-              <input type="number" value={firstValue} onChange={handleFirstInputChange} />
-              <input type="number" value={secondValue} onChange={handleSecondInputChange} />
+              <input type="number" value={firstValue} onChange={handleFirstInputChange} /> 
               <input type="text" disabled value={items[secondIndex].name} />
+              <input type="number" value={secondValue} onChange={handleSecondInputChange} />
             </Form.Group>
             </Form>
         </Modal.Body>
